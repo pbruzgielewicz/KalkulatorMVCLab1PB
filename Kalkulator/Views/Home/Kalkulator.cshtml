@@ -1,0 +1,23 @@
+@using Kalkulator.Models.Services
+@model Kalkulator.Models.KalkulatorZapytanie
+@{
+    ViewData["Title"] = "Kalkulator";
+}
+
+<h1>Kalkulator</h1>
+<form>
+    <input type="text" asp-for="Number1" />pierwsza liczba <br/>
+    <input type="text" asp-for="Number2" />druga liczba
+    <br/>
+    <select asp-for="EquationType">
+        <option value="1">Dodawanie</option>
+        <option value="2">Odejmowanie</option>
+        <option value="3">Mnożenie</option>
+        <option value="4">Dzielenie</option>
+    </select>
+    <br/>
+        <input type="submit" />
+
+</form>
+<p>Wynik: @ViewBag.wynik</p>
+
